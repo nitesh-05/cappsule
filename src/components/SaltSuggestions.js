@@ -15,13 +15,12 @@ const LowestPrice = ({ form, strength, suggestion, selectedPacking }) => {
       // Get the pharmacies for the selected packing
       const pharmacies =
         suggestion.salt_forms_json[form][strength][selectedPacking] || {};
-
       // Iterate over the pharmacies for the selected packing
       Object.values(pharmacies).forEach((pharmacy) => {
         // Check if the pharmacy has a selling price
         if (pharmacy && pharmacy.selling_price !== null) {
           // Update lowestPrice if the current selling price is lower
-          pharmacy.map((sellingPrice) => {
+          pharmacy.forEach((sellingPrice) => {
             if (
               lowestPrice === null ||
               sellingPrice.selling_price < lowestPrice

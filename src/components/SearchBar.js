@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchIcon from "../icons/Search";
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, className }) => {
   const [query, setQuery] = useState("");
 
   const handleChange = (e) => {
@@ -16,7 +16,7 @@ const SearchBar = ({ onSearch }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mb-2 p-4 flex items-center justify-between w-full"
+      className={`mb-2 p-4 sticky top-0 bg-white ${className}`}
     >
       <div className="flex items-center rounded-full overflow-hidden border border-gray-200 shadow-xl w-full px-8 py-2">
         <SearchIcon />

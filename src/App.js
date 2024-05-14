@@ -20,7 +20,10 @@ const App = () => {
   return (
     <div className="container mx-auto px-8 p-4 flex flex-col justify-center items-center">
       <h1 className="text-2xl font-bold mt-8">Cappsule web development test</h1>
-      <SearchBar onSearch={handleSearch} className="w-full" />
+      <SearchBar
+        onSearch={handleSearch}
+        className="w-full sticky top-0 bg-white"
+      />
       <div className="border-b-2 border-gray-200 w-full mb-6"></div>
       {isLoading && (
         <div className="flex items-center justify-center h-[30rem]">

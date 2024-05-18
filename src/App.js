@@ -4,6 +4,7 @@ import { fetchData } from "./api/FetchByName";
 import SaltSuggestions from "./components/SaltSuggestions";
 import { css } from "@emotion/react";
 import { RingLoader } from "react-spinners";
+import DUMMY_DATA from "../src/DATA/DUMMY_DATA.json";
 
 const App = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -11,7 +12,8 @@ const App = () => {
 
   const handleSearch = async (query) => {
     setIsLoading(true);
-    const data = await fetchData(query);
+    // const data = await fetchData(query);
+    const data = DUMMY_DATA;
     if (data) {
       setSearchResults(data.data.saltSuggestions);
     }

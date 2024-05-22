@@ -12,7 +12,7 @@ const App = () => {
 
   const handleSearch = async (query) => {
     setIsLoading(true);
-    // fetch data from endpoint
+    // fetch data from endpoints
     // const data = await fetchData(query);
     const data = DUMMY_DATA;
     if (data) {

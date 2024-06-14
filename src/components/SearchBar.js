@@ -25,7 +25,7 @@ const SearchBar = ({ onSearch, className }) => {
           maxLength={20}
           value={query}
           onChange={handleChange}
-          placeholder="Search medicine name"
+          placeholder="Search Medicine Name"
           className="flex-1 px-4 py-2 focus:outline-none focus:border-blue-500"
         />
         <button type="submit" className="hover:text-blue-900 text-blue-600">
